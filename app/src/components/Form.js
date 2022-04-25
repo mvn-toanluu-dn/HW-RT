@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import TableUsers from "./TableUsers";
+import Modal from "./Modal";
 
-class Form extends Component {
+export default class Form extends Component {
   constructor() {
     super();
     this.state = {
@@ -8,22 +10,22 @@ class Form extends Component {
       email: "",
       password: "",
       country: "",
-      gender: "",
+      gender: 0,
       info: "",
       agree: false,
+      isVisible: false,
+      id: null,
     };
-    this.handleOnChange.bind(this);
-    this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    e.target.reset();
     const id = Math.floor(Math.random() * 1000);
     const { data, email, password, country, gender, info, agree } = this.state;
     const user = { id, email, password, country, gender, info, agree };
 
     this.setState({ data: [...data, user] });
-    e.target.reset();
   }
 
   handleOnChange(e) {
@@ -36,15 +38,19 @@ class Form extends Component {
     });
   }
 
-  handleOnDelete(id) {
+  handleOnDelete() {
+    const { id } = this.state;
     const newData = this.state.data.filter((user) => user.id !== id);
+
     this.setState({ data: newData });
+    this.setState({ isVisible: false });
   }
 
   render() {
+    const { data, isVisible, id } = this.state;
     return (
-      <div className="user-form">
-        <form>
+      <>
+        <form onSubmit={(e) => this.handleSubmit(e)}>
           <div className="form-control">
             <label htmlFor="email">Email: </label>
             <input
@@ -127,43 +133,22 @@ class Form extends Component {
               />
             </label>
           </div>
-          <div className="form-control">
-            <button onClick={(e) => this.handleSubmit(e)}>Submit</button>
-          </div>
+          <button>Submit</button>
         </form>
-        <table className="user-data">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Email</th>
-              <th>Password</th>
-              <th>Country</th>
-              <th>Gender</th>
-              <th>Info</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.data.map((user) => (
-              <tr key={user}>
-                <td>{user.id}</td>
-                <td>{user.email}</td>
-                <td>{user.password}</td>
-                <td>{user.country}</td>
-                <td>{user.gender}</td>
-                <td>{user.info}</td>
-                <td>
-                  <button onClick={() => this.handleOnDelete(user.id)}>
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+        {data.length > 0 && 
+          <TableUsers
+            data={data}
+            onDelete={(id) => this.setState({ isVisible: true, id })}
+          />
+        }
+        <Modal
+          isVisible={isVisible}
+          title="Are you sure you want to delete?"
+          onSubmit={() => this.handleOnDelete()}
+          onCancel={() => this.setState({ isVisible: false })}
+        />
+      </>
     );
   }
 }
 
-export default Form;

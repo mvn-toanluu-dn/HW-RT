@@ -51,10 +51,7 @@ form-control {
   width: 100%;
 }
 
-user-form {
-  display: flex;
-  justify-content: center;
-}
+
 
 label {
   display: block;
@@ -66,28 +63,26 @@ input:not([type="radio"]):not([type="checkbox"]), textarea, select {
   height: 40px;
   border: 1px solid #ccc;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 4px;
   box-sizing: border-box;
+  border: none;
 }
 button {
   width: 100%;
-  height: 40px;
-  background: #222;
+  border: none;
+  cursor: pointer;
+  background-color: #111;
   color: #fff;
-  text-align: center;
+  border-radius: 4px;
+  font-weight: 700px;
+  padding: 10px 0;
 }
 textarea {
   height: 100%;
 }
 
-.user-data {
-  position: relative;
-  width: 80%;
-  height: 40px;
-  margin-left: 140px;
-  margin-top: 10px;
-}
-table, th, tbody, td {
+table{
+  width: 100%;
   border: 1px solid #111;
   border-collapse: collapse;
 }
@@ -95,4 +90,69 @@ table, th, tbody, td {
 th, td {
   padding: 20px 20px;
   text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.modal-action {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.btn {
+  width: 100px;
+  padding: 5px 15px;
+}
+
+.btn-cancel {
+  background-color: gray;
+  color: white;
+}
+
+.btn-confirm {
+  background-color: #111;
+  color: white;
+  margin-left: 10px;
+}
+
+table th {
+  border: 1px solid #ddd;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #111;
+  color: white;
+}
+
+tr {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+button {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  background-color: #111;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 10px 0;
 }
