@@ -62,7 +62,7 @@ export default function Form() {
         </div>
         <div className="form-control">
           <label>Gender</label>
-          <input name="gender" {...gender} value="0" defaultChecked />
+          <input name="gender" {...gender} value="0" />
           Male
           <input name="gender" {...gender} value="1" />
           Female
