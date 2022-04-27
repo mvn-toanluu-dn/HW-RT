@@ -36,3 +36,63 @@
     transform: rotate(360deg);
   }
 }
+
+form {
+  text-align: left;
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid #111;
+  background: rgb(250, 250, 250);
+  border-radius: 8px;
+  margin: auto;
+}
+
+form-control {
+  width: 100%;
+}
+
+user-form {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  display: block;
+  padding: 5px 0;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), textarea, select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+button {
+  width: 100%;
+  height: 40px;
+  background: #222;
+  color: #fff;
+  text-align: center;
+}
+textarea {
+  height: 100%;
+}
+
+.user-data {
+  position: relative;
+  width: 80%;
+  height: 40px;
+  margin-left: 140px;
+  margin-top: 10px;
+}
+table, th, tbody, td {
+  border: 1px solid #111; 
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 20px 20px;
+  text-align: center;
+}
