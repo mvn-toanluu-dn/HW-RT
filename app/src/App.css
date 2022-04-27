@@ -88,7 +88,7 @@ textarea {
   margin-top: 10px;
 }
 table, th, tbody, td {
-  border: 1px solid #111;
+  border: 1px solid #111; 
   border-collapse: collapse;
 }
 
