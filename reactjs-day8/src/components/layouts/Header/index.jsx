@@ -34,7 +34,7 @@ export default function Header() {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/product-list">Product</Link>
+                  <Link to="/products">Product</Link>
                 </li>
                 <li>
                   <Link to="/about-us">About Us</Link>
@@ -48,7 +48,7 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                <a href="/">
+                <a href="/login">
                   <FaUser />
                 </a>
               </li>
