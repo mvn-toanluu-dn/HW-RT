@@ -23,7 +23,7 @@
   }
 
   .header-bottom {
-    height: 300px;
+    height: 100px;
     .header-menu {
       display: flex;
       justify-content: flex-start;
@@ -43,16 +43,19 @@
           height: 100%;
         }
       }
-        .icon-list {
-          display: flex;
-          justify-content: flex-end;
-          align-items: flex-end;
-          li {
-            margin-left: 10px;
+      .icon-list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        li {
+          margin-left: 10px;
+          span {
+            color: map-get($colors, pred);
           }
         }
       }
     }
+  }
 
   // .header-left {
   //   line-height: 50px;

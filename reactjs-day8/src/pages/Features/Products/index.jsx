@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import ProductItem from "../../components/modules/ProductItem/index";
+import ProductItem from "../../../components/modules/ProductItem/index";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
-
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
+    fetch(`https://fakestoreapi.com/products`)
       .then((res) => res.json())
       .then((products) => setProducts(products));
   }, []);

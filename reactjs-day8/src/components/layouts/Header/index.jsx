@@ -1,8 +1,10 @@
 import { FaSearch, FaUser, FaShoppingBag, FaHeart } from "react-icons/fa";
 import { BsShuffle } from "react-icons/bs";
 import { Link } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 export default function Header() {
+  const fav = useSelector((state) => state.fav.value);
+  console.log(fav);
   return (
     <header className="page-header">
       <div className="header-top">
@@ -59,7 +61,8 @@ export default function Header() {
               </li>
               <li>
                 <a href="/">
-                  <FaHeart />
+                  <FaHeart className="icon-fav" />
+                  {!!fav.length && <span>{fav.length}</span>}
                 </a>
               </li>
               <li>

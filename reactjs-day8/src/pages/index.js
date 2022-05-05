@@ -1,6 +1,6 @@
-import Home from "./Home";
+import Home from "./Features/Home";
 import AboutUs from "./Features/AboutUs";
-import Products from "./Products";
-import ProductDetail from "./ProductDetail";
+import Products from "./Features/Products";
+import ProductDetail from "./Features/ProductDetail";
 
 export { Home, AboutUs, Products, ProductDetail };

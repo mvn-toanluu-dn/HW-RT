@@ -1,7 +1,7 @@
 import { Route } from "react-router-dom";
-import Home from "../Home";
-import Products from "../Products";
-import ProductDetail from "../ProductDetail";
+import Home from "./Home";
+import Products from "./Products";
+import ProductDetail from "./ProductDetail";
 import { Routes } from "react-router-dom";
 export default function Features() {
   return (
