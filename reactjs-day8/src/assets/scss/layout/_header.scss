@@ -1,0 +1,105 @@
+.page-header {
+  .header-top-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    .header-left {
+      display: flex;
+      align-items: center;
+      align-content: space-around;
+      li {
+        margin: 20px;
+      }
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 10px;
+        color: $red;
+      }
+    }
+  }
+
+  .header-bottom {
+    height: 100px;
+    .header-menu {
+      display: flex;
+      justify-content: flex-start;
+      .logo {
+        position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      .header-nav {
+        .menu-list {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          height: 100%;
+        }
+      }
+      .icon-list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        li {
+          margin-left: 10px;
+          span {
+            color: map-get($colors, pred);
+          }
+        }
+      }
+    }
+  }
+
+  // .header-left {
+  //   line-height: 50px;
+  //   li {
+  //     display: inline-block;
+  //     margin-left: 50px;
+  //   }
+  // }
+  // .header-right {
+  //   float: right;
+  //   line-height: 50px;
+  //   span {
+  //     color: $red;
+  //   }
+  // }
+  // .header-nav {
+  //   height: 90px;
+  //   .logo {
+  //     display: block;
+  //     margin-top: 16px;
+  //     img {
+  //       width: 100px;
+  //     }
+  //   }
+  //   .menu-list {
+  //     display: inline-block;
+  //     margin-left: 180px;
+  //     li {
+  //       display: inline-block;
+  //       line-height: 90px;
+  //       padding: 16px;
+  //       font-size: 18px;
+  //       font-weight: 600px;
+  //     }
+  //   }
+  // }
+  // .icon-list {
+  //   display: inline;
+  //   float: right;
+  //   li {
+  //     display: inline;
+  //     line-height: 90px;
+  //     font-size: 18px;
+  //     margin-left: 18px;
+  //   }
+  // }
+}
