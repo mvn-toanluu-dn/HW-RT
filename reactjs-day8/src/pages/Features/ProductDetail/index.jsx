@@ -16,7 +16,7 @@ export default function ProductDetail(props) {
       <h3 className="page-detail-title m-30">Product Detail</h3>
       <div className="product-detail-item flex-around row">
         <div className="product-detail-img col-3">
-          <img src={productDetail.image}></img>
+          <img src={productDetail.image} alt="product"></img>
         </div>
         <div className="product-detail-content col-7 ml-10 mb-30">
           <h4 className="product-title">{productDetail.title}</h4>
